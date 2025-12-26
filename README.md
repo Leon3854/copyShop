@@ -61,3 +61,42 @@ Health-check эндпоинт
 
 ## 5. Структура проекта
 
+```bash
+src/
+├── modules/
+│   ├── user/
+│   │   ├── user.controller.ts
+│   │   ├── user.service.ts
+│   │   ├── user.repository.ts
+│   │   ├── dto/
+│   │   │   ├── create-user.dto.ts
+│   │   │   └── update-user.dto.ts
+│   │   └── entities/
+│   │       └── user.entity.ts
+│   ├── auth/
+│   │   ├── auth.controller.ts
+│   │   ├── auth.service.ts
+│   │   ├── strategies/
+│   │   │   └── jwt.strategy.ts
+│   │   ├── guards/
+│   │   │   └── jwt-auth.guard.ts
+│   │   └── dto/
+│   │       ├── login.dto.ts
+│   │       └── register.dto.ts
+│   └── events/
+│       ├── events.module.ts
+│       ├── events.service.ts
+│       └── producers/
+│           └── user-event.producer.ts
+├── common/
+│   ├── filters/
+│   ├── interceptors/
+│   ├── decorators/
+│   └── constants/
+├── prisma/
+│   ├── schema.prisma
+│   └── migrations/
+└── config/
+    └── configuration.ts
+```
+
